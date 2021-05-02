@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+body {
+  background-image: linear-gradient(120deg, #eee5f7 0%, #9368d8 100%);
+  /* To stop this from repeating */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+} */
+form input{
+  /* padding: 0.5rem; */
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background: white;
+}
+form button {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  color: #46219c;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #46219c;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+  padding-left: 5px;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.select {
+  font-size: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
 }
+
+select {
+  color: #46219c;
+  cursor: pointer;
+  width: 12rem;
+  
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 5px;
+  background: #46219c;
+  cursor: pointer;
+  pointer-events: none;
+} 
+
+
+
+
+.todo-list {
+  min-width: 30%;
+  list-style: none; 
+  /* list style must be here as to stop the bullet behavior */
+}
+
+.todo {
+  border-radius: 5px 0 0 5px;
+  transition: all 1s ease;
+}
+
+.todo li {
+  flex: 1;
+  /* set the length of flex item to be the same regardless of the size */
+}
+
+
+
+/* button customization */
+.trash-btn,
+.complete-btn {
+  background: #46219c;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn {
+  background: rgb(11, 212, 162);
+}
+
+.trash-btn{
+  border-radius: 0 5px 5px 0;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem; 
+  /* prevent the text from sticking to the edge */
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+
+
+/* Transition */
+/*
+.select:hover::after {
+  transform: scale(1.5);
+}
+*/
