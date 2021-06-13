@@ -4,7 +4,7 @@
   box-sizing: border-box;
 } */
 body {
-  background-image: linear-gradient(90deg, #EF7674 0%, #EE676D 17%, #EC5766 34%, #EC5766 51%, #DA344D 68%, #DD465D 100%);
+  background-image: linear-gradient(45deg, #0a2463, #4b437c, #8b6294, #d8315b, #dc446a);
   /* To stop this from repeating */
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -58,7 +58,7 @@ select {
 }
 
 select {
-  color: #46219c;
+  color: #0a2463;
   cursor: pointer;
   width: 12rem;
   
@@ -70,7 +70,7 @@ select {
   top: 0;
   right: 0;
   padding: 2px 5px;
-  background: #EC5766;
+  background: #d8315b;
   cursor: pointer;
   pointer-events: none;
 } 
@@ -99,7 +99,7 @@ select {
 /* button customization */
 .trash-btn,
 .complete-btn {
-  background: #EC5766;
+  background: #dc446a;
   color: white;
   border: none;
   padding: 1rem;
@@ -107,7 +107,7 @@ select {
   font-size: 1rem;
 }
 .complete-btn {
-  background: rgb(11, 212, 162);
+  background: #8b6294;
 }
 
 .trash-btn{
